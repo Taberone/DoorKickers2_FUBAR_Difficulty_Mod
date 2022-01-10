@@ -5,8 +5,8 @@
 
 	<Entity name="CIA Undercover" type="Human" editorAutoHeight="false">
 		<RenderObject3D model="data/models/humans/cia_undercover.khm" diffuseTex="data/models/humans/civilian_male_war_correspondent.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>		
 		<RenderObject3D model="data/models/humans/attachments/cia_jacket.khm" diffuseTex="data/models/humans/attachments/cia_jacket.dds" windAnimated="1"/>
-		<RenderObject3D model="data/models/humans/attachments/cia_scarf_beret.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="25"/>
 		<Human type="GoodGuy"
@@ -30,6 +30,7 @@
 				<Item name="IronSights_Pistol"/>
 				<Item name="Flashbang"/>
 				<Item name="Slap Charge"/>
+				<Item name="CapUndercover"/>
 				<Item name="Lockpick"/>
 			</Equipment>
 		</Human>
@@ -38,7 +39,6 @@
 	<Entity name="CIA BlackOps" type="Human" editorAutoHeight="false">
 		<RenderObject3D model="data/models/humans/ranger_assaulter.khm" diffuseTex="data/models/humans/cia_01.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/cia_cap.khm" diffuseTex="data/models/humans/attachments/cia_cap_01.dds"/>		
 		<RenderObject3D model="data/models/humans/attachments/cia_vest_01.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_vest.dds"/>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="25"/>
@@ -66,6 +66,7 @@
 				<Item name="Slap Charge"/>
 				<Item name="Lockpick"/>
 				<Item name="Poncho"/>
+				<Item name="CapBlackOps"/>				
 				<Item name="CIA TacVest Level III"/>
 			</Equipment>
 		</Human>
@@ -73,10 +74,10 @@
 
 	<Entity name="Ranger Assaulter" type="Human" editorAutoHeight="false">
 		<RenderObject3D model="data/models/humans/ranger_assaulter.khm" diffuseTex="data/models/humans/ranger_assaulter.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/ranger_assaulter_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_helmet.dds">
+		<RenderObject3D model="data/models/humans/attachments/ranger_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_assaulter_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_helmet.dds" attachSlot="Bip001 Head">
 			<Specular shininess="8" intensity="1.3"/>
 		</RenderObject3D>
-		<RenderObject3D model="data/models/humans/attachments/ranger_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_vest.dds"/>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="25"/>
 		<Human type="GoodGuy"
@@ -100,8 +101,8 @@
 				<Item name="Flashbang"/>
 				<Item name="Slap Charge"/>
 				<Item name="Spy Camera"/>
-
 				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
 				<Item name="Rangers SFLCS Level III"/>
 			</Equipment>
 		</Human>
@@ -109,12 +110,12 @@
 
 	<Entity name="Ranger Support" type="Human" editorAutoHeight="false">
 		<RenderObject3D model="data/models/humans/ranger_support.khm" diffuseTex="data/models/humans/ranger_support.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/ranger_support_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_support_helmet.dds">
-			<Specular shininess="8" intensity="1.3"/>
-		</RenderObject3D>
 		<RenderObject3D model="data/models/humans/attachments/ranger_support_vest.khm" diffuseTex="data/models/humans/attachments/ranger_support_vest.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/ranger_sidepouch_right.khm" attachSlot="vest_right" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/ranger_sidepouch.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/ranger_sidepouch_left.khm" attachSlot="vest_left" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/ranger_sidepouch.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_support_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_support_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="25"/>
 		<Human type="GoodGuy"
@@ -138,8 +139,8 @@
 				<Item name="Smoke Grenade"/>
 				<Item name="Frag Grenade"/>
 				<Item name="Breaching Charge"/>
-				<!--<Item name="Spy Camera"/>-->
 				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
 				<Item name="Rangers SFLCS Level III"/>
 			</Equipment>
 		</Human>
@@ -147,11 +148,11 @@
 
 	<Entity name="Ranger Medic" type="Human" editorAutoHeight="false" hideInEditor="true">
 		<RenderObject3D model="data/models/humans/ranger_medic.khm" diffuseTex="data/models/humans/ranger_medic.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/ranger_medic_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_medic_helmet.dds">
-			<Specular shininess="8" intensity="1.3"/>
-		</RenderObject3D>
 		<RenderObject3D model="data/models/humans/attachments/ranger_medic_vest.khm" diffuseTex="data/models/humans/attachments/ranger_medic_vest.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/ranger_arm_pocket.khm" diffuseTex="data/models/humans/attachments/ranger_arm_pocket_medic.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_medic_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_medic_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="25"/>
 		<Human type="GoodGuy"
@@ -176,6 +177,7 @@
 				<Item name="Smoke Grenade"/>
 				<Item name="Spy Camera"/>
 				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
 				<Item name="Rangers SFLCS Level III"/>
 			</Equipment>
 		</Human>
@@ -183,13 +185,13 @@
 
 	<Entity name="Ranger Marksman" type="Human" editorAutoHeight="false">
 		<RenderObject3D model="data/models/humans/ranger_marksman.khm" diffuseTex="data/models/humans/ranger_marksman.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_helmet.dds">
-			<Specular shininess="8" intensity="1.3"/>
-		</RenderObject3D>
 		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_vest.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_vest.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/ranger_marksmanmesh.khm" diffuseTex="data/models/humans/attachments/ranger_marksmanmesh.dds" blendMode="none" alphaTest="true"/>
-		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_headmesh.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_headmesh.dds" blendMode="none" alphaTest="true"/>
 		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_wristmap.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_wristmap.dds" />
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_headmesh.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_headmesh.dds" blendMode="none" alphaTest="true" attachSlot="Bip001 Head"/>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="25"/>
 		<Human type="GoodGuy"
@@ -213,6 +215,7 @@
 				<Item name="Smoke Grenade"/>
 				<Item name="Frag Grenade"/>
 				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
 				<Item name="Rangers SFLCS Level III"/>
 			</Equipment>
 		</Human>
@@ -220,11 +223,10 @@
 
 	<Entity name="Ranger Grenadier" type="Human" editorAutoHeight="false">
 		<RenderObject3D model="data/models/humans/ranger_grenadier.khm" diffuseTex="data/models/humans/ranger_grenadier.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/ranger_grenadier_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_grenadier_helmet.dds">
+		<RenderObject3D model="data/models/humans/attachments/ranger_grenadier_vest.khm" diffuseTex="data/models/humans/attachments/ranger_grenadier_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_grenadier_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_grenadier_helmet.dds" attachSlot="Bip001 Head">
 			<Specular shininess="8" intensity="1.3"/>
 		</RenderObject3D>
-		<RenderObject3D model="data/models/humans/attachments/ranger_grenadier_vest.khm" diffuseTex="data/models/humans/attachments/ranger_grenadier_vest.dds"/>
-		<RenderObject3D model="data/models/weapons/m203.khm" attachSlot="underbarrel" skipGOSSAO="true" diffuseTex="data/models/weapons/m203.dds"/>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="25"/>
 		<Human type="GoodGuy"
@@ -247,6 +249,7 @@
 				<Item name="Breaching Charge"/>
 				<!--<Item name="Spy Camera"/>-->
 				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
 				<Item name="Rangers SFLCS Level III"/>
 			</Equipment>
 		</Human>

@@ -300,6 +300,29 @@
 		</Human>
 	</Entity>
 
+	<Entity name="Foreign Advisor Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse3.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse3.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="25" />
+		<Human type="BadGuy">
+			<FOV degrees="110" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" />
+			<Id name="Foreign Advisor" portrait="data/textures/portraits/enemy_concealed.dds" gender="0" voicePack="enemies"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="13.5"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+
 	<Entity name="Foreign Advisor Fanatic" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" hideInEditor="true">
 		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse3.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse3.dds" windAnimated="1"/>
@@ -504,15 +527,14 @@
 
 			<Equipment>
 				<Item name="PM63" />
-				<Item name="Bodyguard SoftArmor" />
+				<!-- Removed for clarity Item name="Bodyguard SoftArmor" /-->
 			</Equipment>
 		</Human>
 	</Entity>
 
 	<Entity name="Bodyguard SMG" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false">
-		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_base_diffuse5.dds"/>
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_shirt_vest.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/enemy_suit.khm" diffuseTex="data/models/humans/attachments/enemy_suit_01.dds"/>		
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="25" />
 		<Human type="BadGuy">
@@ -551,7 +573,7 @@
 
 			<Equipment>
 				<Item name="Mini Uzi Folded" />
-				<Item name="Bodyguard SoftArmor" />
+				<!-- Removed for clarity Item name="Bodyguard SoftArmor" /-->
 			</Equipment>
 		</Human>
 	</Entity>
@@ -574,13 +596,39 @@
 
 			<Equipment>
 				<Item name="AKS 74U"/> 
-				<Item name="Bodyguard SoftArmor" />
+				<!-- Removed for clarity Item name="Bodyguard SoftArmor" /-->
 			</Equipment>
 		</Human>
 	</Entity>
 
+
+<!-- This guy has visible Soft Armor under the suit (and the stats to go with it), but its not clear from top down so maybe don't use? " /-->
+	<Entity name="Bodyguard AKSU Armored" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_shirt_jacket_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_suit.khm" diffuseTex="data/models/humans/attachments/enemy_suit_01.dds"/>			
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="25" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
+			<Id name="Private Security" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemies"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="AKS 74U"/> 
+				<Item name="Bodyguard SoftArmor"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+
 	<Entity name="Bodyguard Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false">
-		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_base_diffuse4.dds"/>
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_shirt_vest.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="25" />

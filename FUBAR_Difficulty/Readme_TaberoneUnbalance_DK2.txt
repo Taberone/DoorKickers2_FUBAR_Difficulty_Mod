@@ -1,4 +1,4 @@
-TABERONE'S PERSONAL UNBALANCING - DOOR KICKERS 2 (EARLY ACCESS 8.0)
+TABERONE'S PERSONAL UNBALANCING - DOOR KICKERS 2 (EARLY ACCESS 11.0)
 Install in Steam\steamapps\common\DoorKickers2\data\mods
 
 1) This mod reduces everyone's health to at least a fourth of their base hit points, making everyone die faster and hopefully making the gameplay like Rainbow Six 3: Raven Shield where it consistently takes only 1-3 bullets to kill someone.
@@ -45,6 +45,9 @@ DETAILED CHANGES: humans_badguys.xml
    Foreign Advisor:
       Health 100 -> 25
       
+   Foreign Advisor Weaponless:
+      Health 100 -> 25
+      
    Foreign Advisor Fanatic:
       Health 100 -> 25
       
@@ -66,9 +69,6 @@ DETAILED CHANGES: humans_badguys.xml
    Veteran Weaponless:
       Health 100 -> 25
       
-   Veteran Weaponless Relaxed:
-      Health 100 -> 25
-      
    Rocket Weaponless:
       Health 100 -> 25
       
@@ -82,6 +82,9 @@ DETAILED CHANGES: humans_badguys.xml
       Health 100 -> 25
       
    Bodyguard AKSU:
+      Health 100 -> 25
+      
+   Bodyguard AKSU Armored:
       Health 100 -> 25
       
    Bodyguard Weaponless:
