@@ -1,6 +1,5 @@
 TABERONE'S PERSONAL UNBALANCING - DOOR KICKERS 2 (EARLY ACCESS 13.0)
 Install in Steam\steamapps\common\DoorKickers2\data\mods
-TO DO: UPDATE TO NEWEST VERSION (EA 13.0)
 
 1) 1/4 HP for everybody. Die in 1-3 bullets like in the classic Rainbow Six trilogy.
 
