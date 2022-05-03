@@ -2,12 +2,15 @@
 		For help, please refer to "help_entities.txt" in this directory.
 -->
 <Entities>
+	<Bind eqp="ExplosiveCharge" to="Hostage"/>
+	<Bind eqp="TECTorch" to="Hostage"/>
+	<Bind eqp="FeetOfSteel" to="Hostage"/>
+	<Bind eqp="DynamicHammer" to="Hostage"/>
 	<Entity name="Hostage" type="Human" fogOfWarVisibility="hiddenInitially" editorAutoHeight="false" tooltip="@tooltip_hostage">
 		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/hostage.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
 		<PhysicalParams health="25" />
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>	
-		<!-- <AnimationSet name="hostage" /> hostages get their anim set from the hood they have equipped -->
 		<Human type="Hostage">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
 			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
@@ -19,21 +22,20 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="BlackHood" />
+				<Item name="HostageBlackHood" />
 			</Equipment>
 		</Human>
-
-		<CanUseEquipment name="ExplosiveCharge"/>
-		<CanUseEquipment name="TEC Torch"/>
-		<CanUseEquipment name="Dynamic Hammer"/>
 	</Entity>
 
+	<Bind eqp="ExplosiveCharge" to="HostageVisible"/>
+	<Bind eqp="TECTorch" to="HostageVisible"/>
+	<Bind eqp="FeetOfSteel" to="HostageVisible"/>
+	<Bind eqp="DynamicHammer" to="HostageVisible"/>
 	<Entity name="HostageVisible" type="Human" fogOfWarVisibility="full" editorAutoHeight="false" tooltip="@tooltip_hostage_visible_known">
 		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/hostage.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
 		<PhysicalParams health="25" />
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
-		<!-- <AnimationSet name="hostage" /> hostages get their anim set from the hood they have equipped -->
 		<Human type="Hostage">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
 			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
@@ -44,21 +46,20 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="BlackHood" />
+				<Item name="HostageBlackHood" />
 			</Equipment>
 		</Human>
-
-		<CanUseEquipment name="ExplosiveCharge"/>
-		<CanUseEquipment name="TEC Torch"/>
-		<CanUseEquipment name="Dynamic Hammer"/>
 	</Entity>
 
+	<Bind eqp="ExplosiveCharge" to="HostageVisibleExecution"/>
+	<Bind eqp="TECTorch" to="HostageVisibleExecution"/>
+	<Bind eqp="FeetOfSteel" to="HostageVisibleExecution"/>
+	<Bind eqp="DynamicHammer" to="HostageVisibleExecution"/>
 	<Entity name="HostageVisibleExecution" type="Human" fogOfWarVisibility="full" editorAutoHeight="false" tooltip="@tooltip_hostage_visible">
 		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/hostage.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
 		<PhysicalParams health="25" />
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
-		<!-- <AnimationSet name="hostage" /> hostages get their anim set from the hood they have equipped -->
 		<Human type="Hostage">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
 			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
@@ -70,13 +71,9 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="BlackHood" />
+				<Item name="HostageBlackHood" />
 			</Equipment>
 		</Human>
-
-		<CanUseEquipment name="ExplosiveCharge"/>
-		<CanUseEquipment name="TEC Torch"/>
-		<CanUseEquipment name="Dynamic Hammer"/>
 	</Entity>
 
 	<!--
@@ -96,12 +93,13 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="BlackHood" />
+				<Item name="HostageBlackHood" />
 			</Equipment>
 		</Human>
 	</Entity>
 	-->
 
+	<!-- NOTE: This name is used by RMG. don't change it please -->
 	<Entity name="VIP" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_enemy_vip">
 		<RenderObject3D model="data/models/humans/civilian_male_fat.khm" diffuseTex="data/models/humans/civilian_male_standard_03.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/cia_scarf_beret.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>
@@ -425,7 +423,6 @@
 		<AnimationSet name="civilian" />
 		<PhysicalParams health="12" />
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
-		<!-- <AnimationSet name="hostage" /> hostages get their anim set from the hood they have equipped -->
 		<Human type="Hostage">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
 			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
@@ -436,7 +433,9 @@
 				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
 			</Mobility>
 
-	
+			<Equipment>
+				<Item name="HostageHandTies" />
+			</Equipment>
 		</Human>
 	</Entity>
 
@@ -446,7 +445,6 @@
 		<AnimationSet name="civilian" />
 		<PhysicalParams health="12" />
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
-		<!-- <AnimationSet name="hostage" /> hostages get their anim set from the hood they have equipped -->
 		<Human type="Hostage">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
 			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
@@ -457,7 +455,9 @@
 				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
 			</Mobility>
 
-
+			<Equipment>
+				<Item name="HostageHandTies" />
+			</Equipment>
 		</Human>
 	</Entity>
 
@@ -466,7 +466,6 @@
 		<AnimationSet name="civilian" />
 		<PhysicalParams health="12" />
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
-		<!-- <AnimationSet name="hostage" /> hostages get their anim set from the hood they have equipped -->
 		<Human type="Hostage">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
 			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
@@ -476,6 +475,9 @@
 				<MoveSpeed min="0.9" defaultMetersPerSec="2.23" max="2.93"/>
 				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
 			</Mobility>
+			<Equipment>
+				<Item name="HostageHandTies" />
+			</Equipment>
 		</Human>
 	</Entity>
 
@@ -485,7 +487,6 @@
 		<AnimationSet name="civilian" />
 		<PhysicalParams health="12" />
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
-		<!-- <AnimationSet name="hostage" /> hostages get their anim set from the hood they have equipped -->
 		<Human type="Hostage">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
 			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
@@ -495,7 +496,9 @@
 				<MoveSpeed min="0.9" defaultMetersPerSec="2.23" max="2.93"/>
 				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
 			</Mobility>
-
+			<Equipment>
+				<Item name="HostageHandTies" />
+			</Equipment>
 		</Human>
 	</Entity>
 
@@ -506,7 +509,6 @@
 		<AnimationSet name="civilian" />
 		<PhysicalParams health="12" />
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
-		<!-- <AnimationSet name="hostage" /> hostages get their anim set from the hood they have equipped -->
 		<Human type="Hostage">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
 			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage"  suppressionRecovery="3.0"/>
@@ -516,7 +518,9 @@
 				<MoveSpeed min="0.9" defaultMetersPerSec="2.23" max="2.93"/>
 				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
 			</Mobility>
-
+			<Equipment>
+				<Item name="HostageHandTies" />
+			</Equipment>
 		</Human>
 	</Entity>
 
